@@ -24,7 +24,7 @@ export const verifyToken = async (session: string | undefined = '') => {
     }
 
     if (error instanceof JWSSignatureVerificationFailed) {
-      console.log('* 서명 검증 실패');
+      console.log('* 서명 검증 실패', error);
       return null;
     }
 
